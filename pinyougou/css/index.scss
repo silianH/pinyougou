@@ -15,9 +15,10 @@
 
 .index_goodsList {
   .goods {
-    padding: 0 10px;
+    
+    padding: 0 6px;
     .goodsTitle {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
     .goodsContent {
       ul {
@@ -26,7 +27,8 @@
         justify-content: space-between;
       }
       li {
-        margin-bottom: 10px;
+        padding: 6px;
+        margin-bottom: 6px;
         background-color: #fff;
         width: 49%;
         .messageImg {
@@ -53,7 +55,7 @@
         }
         .likeness {
           text-align: center;
-          margin-bottom: 10px;
+          // margin-bottom: 10px;
           a {
             display: inline-block;
             width: 70%;

@@ -1,0 +1,58 @@
+.pyg_view{
+  display: flex;
+  .left{
+    width: .9rem;
+    background-color: pink;
+    overflow: hidden;
+    background-color: #efefef;
+    li{
+      width: 100%;
+      font-size: 0.14rem;
+      text-align: center;
+      height: 0.4rem;
+      line-height: 0.4rem;
+      // transition: border-left 1s;
+      &.checked{
+        background-color: #fff;
+        border-left: 0.04rem solid #0094ff;
+      }
+    }
+  }
+  .right{
+    overflow: hidden;
+    background-color: #fff;
+    flex: 1;
+    >ul>li{
+      display: none;
+      &.checked{
+        display: block;
+      }
+    }
+    .right_title{
+      h3{
+        color: #0094ff;
+        font-size: 0.14rem;
+        padding: .05rem .2rem;
+      }
+    }
+    .right_content{
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          padding: .1rem .05rem;
+          width: 33.33%;
+          text-align: center;
+          img{
+            margin: 0 auto;
+            width: 50%;
+          }
+          span{
+            font-size: 0.14rem;
+          }
+        }
+      }
+      
+    }
+  }
+}

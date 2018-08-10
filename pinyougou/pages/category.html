@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>品优购-分类列表</title>
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/font/iconfont.css">
+  <link rel="stylesheet" href="/css/comomon.css">
+  <link rel="stylesheet" href="/css/category.css">
+
+</head>
+
+<body>
+  <header class="pyg_header">
+    <div class="mui-input-row mui-search">
+      <input type="search" class="mui-input-clear" placeholder="">
+    </div>
+  </header>
+  <div class="pyg_view">
+    <div class="left" id="leftScroll">
+      <ul>
+        <!-- 占坑 categoriesTemplate -->
+      </ul>
+    </div>
+    <div class="right" id="rightScroll">
+      <ul>
+        <li class="checked">
+          <div class="right_title">
+            <h3>电视</h3>
+          </div>
+          <div class="right_content">
+            <ul>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://api.pyg.ak48.xyz/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000945023821_1_400x400.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000945023821_1_400x400.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000945023821_1_400x400.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000945023821_1_400x400.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000945023821_1_400x400.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000945023821_1_400x400.jpg" alt="">
+                  <span>曲面电视</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer class="pyg_footer">
+    <a href="javascript:;">
+      <span class="iconfont icon-fangzi"></span>
+      <span class="link_name">首页</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-liebiao"></span>
+      <span class="link_name">分类</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-gouwuche"></span>
+      <span class="link_name">购物车</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-wode"></span>
+      <span class="link_name">用户</span>
+    </a>
+  </footer>
+
+</body>
+<script type="text/template" id="categoriesTemplate">
+  <ul>
+    {{each data value index}} {{if index==0}}
+    <li class="checked" data-id="{{value.cat_id}}" data-level="{{value.level}}">
+      <a href="javascript:;">{{value.cat_name}}</a>
+    </li>
+    {{else}}
+    <li>
+      <a href="javascript:;">{{value.cat_name}}</a>
+    </li>
+    {{/if}} {{/each}}
+  </ul>
+</script>
+<script type="text/template" id="cgContentTemplate">
+  <ul>
+    {{each data value index}} {{if index==0}}
+    <li class="checked">
+      {{each value.children value1 index1}}
+      <div class="right_title">
+        <h3>{{value1.cat_name}}</h3>
+      </div>
+      <div class="right_content">
+        <ul>
+          {{each value1.children value2 index2}}
+          <li>
+            <a href="javascript:;">
+              <img src="http://api.pyg.ak48.xyz/{{value2.cat_icon}}" alt="">
+              <span>{{value2.cat_name}}</span>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/each}}
+    </li>
+    {{else}}
+    <li>
+      {{each value.children value1 index1}}
+      <div class="right_title">
+        <h3>{{value1.cat_name}}</h3>
+      </div>
+      <div class="right_content">
+        <ul>
+          {{each value1.children value2 index2}}
+          <li>
+            <a href="javascript:;">
+              <img src="http://api.pyg.ak48.xyz/{{value2.cat_icon}}" alt="">
+              <span>{{value2.cat_name}}</span>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/each}}
+    </li>
+    {{/if}} {{/each}}
+  </ul>
+</script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/mui/js/mui.js"></script>
+<script src="/lib/iscroll/iscroll.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/category.js"></script>
+
+</html>

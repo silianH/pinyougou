@@ -18,11 +18,11 @@
 }
 
 .index_goodsList .goods {
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 .index_goodsList .goods .goodsTitle {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .index_goodsList .goods .goodsContent ul {
@@ -37,7 +37,8 @@
 }
 
 .index_goodsList .goods .goodsContent li {
-  margin-bottom: 10px;
+  padding: 6px;
+  margin-bottom: 6px;
   background-color: #fff;
   width: 49%;
 }
@@ -70,7 +71,6 @@
 
 .index_goodsList .goods .goodsContent li .likeness {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .index_goodsList .goods .goodsContent li .likeness a {

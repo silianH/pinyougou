@@ -1,0 +1,71 @@
+.pyg_view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .left {
+  width: .9rem;
+  background-color: pink;
+  overflow: hidden;
+  background-color: #efefef;
+}
+
+.pyg_view .left li {
+  width: 100%;
+  font-size: 0.14rem;
+  text-align: center;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+
+.pyg_view .left li.checked {
+  background-color: #fff;
+  border-left: 0.04rem solid #0094ff;
+}
+
+.pyg_view .right {
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view .right > ul > li {
+  display: none;
+}
+
+.pyg_view .right > ul > li.checked {
+  display: block;
+}
+
+.pyg_view .right .right_title h3 {
+  color: #0094ff;
+  font-size: 0.14rem;
+  padding: .05rem .2rem;
+}
+
+.pyg_view .right .right_content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pyg_view .right .right_content ul li {
+  padding: .1rem .05rem;
+  width: 33.33%;
+  text-align: center;
+}
+
+.pyg_view .right .right_content ul li img {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.pyg_view .right .right_content ul li span {
+  font-size: 0.14rem;
+}
+/*# sourceMappingURL=category.css.map */
