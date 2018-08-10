@@ -1,1 +1,80 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.pyg_view .index_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 0;
+}
+
+.pyg_view .index_nav a {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view .index_nav a img {
+  width: 76%;
+  margin: 0 auto;
+}
+
+.index_goodsList .goods {
+  padding: 0 10px;
+}
+
+.index_goodsList .goods .goodsTitle {
+  margin-bottom: 10px;
+}
+
+.index_goodsList .goods .goodsContent ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.index_goodsList .goods .goodsContent li {
+  margin-bottom: 10px;
+  background-color: #fff;
+  width: 49%;
+}
+
+.index_goodsList .goods .goodsContent li .messageImg {
+  max-height: 192px;
+}
+
+.index_goodsList .goods .goodsContent li .goods_name {
+  padding-top: 5px;
+  height: 46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  color: #000;
+  line-height: 20px;
+}
+
+.index_goodsList .goods .goodsContent li .goods_price {
+  color: #f40;
+  font-size: 18px;
+}
+
+.index_goodsList .goods .goodsContent li .goods_price span {
+  font-size: 14px;
+}
+
+.index_goodsList .goods .goodsContent li .likeness {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.index_goodsList .goods .goodsContent li .likeness a {
+  display: inline-block;
+  width: 70%;
+}
+/*# sourceMappingURL=index.css.map */

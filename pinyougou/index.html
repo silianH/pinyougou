@@ -20,14 +20,58 @@
     </div>
   </header>
   <div class="pyg_view">
-    <div class="sliderHead">
+    <div class="index_sliderHead">
       <div class="mui-slider">
         <!-- 占坑 sliderTemplate -->
       </div>
     </div>
-    <nav class="index_nav"></nav>
+    <nav class="index_nav">
+      <!-- catitemsTemplate 占坑 -->
+    </nav>
+    <div class="index_goodsList">
+      <div class="goods">
+        <div class="goodsTitle">
+          <img src="http://image4.suning.cn/uimg/cms/img/149559219946350066.png" alt="">
+        </div>
+        <div class="goodsContent">
+          <ul>
+            <li>
+              <a href="javascript:;" class="goodsMessage">
+                <div class="messageImg">
+                  <img src="http://image5.suning.cn/uimg/b2c/newcatentries/0070072458-000000000134974159_1_400x400.jpg" alt="">
+                </div>
+                <p class="goods_name">哈曼卡顿（Harman/Kardon） SABRE35CN 条形回音壁套装 黑色</p>
+                <p class="goods_price">
+                  <span>￥</span>6999
+                </p>
+              </a>
+              <div class="likeness">
+                <a href="javascript:;" class="mui-btn mui-btn-primary">找相似</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <footer class="pyg_footer"></footer>
+  <footer class="pyg_footer">
+    <a href="javascript:;">
+      <span class="iconfont icon-fangzi"></span>
+      <span class="link_name">首页</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-liebiao"></span>
+      <span class="link_name">分类</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-gouwuche"></span>
+      <span class="link_name">购物车</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-wode"></span>
+      <span class="link_name">用户</span>
+    </a>
+  </footer>
 
 </body>
 <script type="text/template" id="sliderTemplate">
@@ -54,16 +98,49 @@
       </div>
     </div>
     <div class="mui-slider-indicator">
-      {{each data value index}}
-      {{if index==0}}
+      {{each data value index}} {{if index==0}}
       <div class="mui-indicator mui-active"></div>
-      {{/if}}
-      {{if index!=0}}
+      {{/if}} {{if index!=0}}
       <div class="mui-indicator"></div>
-      {{/if}}
-      {{/each}}
+      {{/if}} {{/each}}
     </div>
   </div>
+</script>
+<script type="text/template" id="catitemsTemplate">
+  {{each data value}}
+  <a href="">
+    <img src="{{value.image_src}}" alt="">
+  </a>
+  {{/each}}
+</script>
+<script type="text/template" id="goodslistTemplate">
+  {{each data value index}}
+  <div class="goods">
+    <div class="goodsTitle">
+      <img src="{{value.group_img}}" alt="">
+    </div>
+    <div class="goodsContent">
+      <ul>
+        {{each value.goods values}}
+        <li>
+          <a href="javascript:;" class="goodsMessage">
+            <div class="messageImg">
+              <img src="{{values.goods_small_logo}}" alt="">
+            </div>
+            <p class="goods_name">{{values.goods_name}}</p>
+            <p class="goods_price">
+              <span>￥</span>{{values.goods_price}}
+            </p>
+          </a>
+          <div class="likeness">
+            <a href="javascript:;" class="mui-btn mui-btn-primary">找相似</a>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{/each}}
 </script>
 
 <script src="/lib/zepto/zepto.js"></script>

@@ -3,6 +3,8 @@ $(function () {
 
   function init() {
     getSwiperData();
+    getCatitems();
+    getGoodsList();
   }
 
   function getSlider() {
@@ -20,10 +22,29 @@ $(function () {
         data: res.data
       });
       // console.log(swiperTemp);
-      $(".sliderHead").html(swiperTemp);
+      $(".index_sliderHead").html(swiperTemp);
       getSlider();
     })
   }
 
+  // http://api.pyg.ak48.xyz/api/public/v1/home/catitems
+  function getCatitems() {
+    $.get("http://api.pyg.ak48.xyz/api/public/v1/home/catitems",function (res) {
+      // console.log(res);
+      var catitemsTemp = template("catitemsTemplate",{data:res.data});
+      // console.log(catitemsTemp);
+      $(".index_nav").html(catitemsTemp);
+    })
+  }
+
+  // http://api.pyg.ak48.xyz/api/public/v1/home/goodslist
+  function getGoodsList() {
+    $.get("http://api.pyg.ak48.xyz/api/public/v1/home/goodslist",function (res) {
+      console.log(res);
+      var goodsListTemp = template("goodslistTemplate",{data:res.data});
+      console.log(goodsListTemp);
+      $(".goods").html(goodsListTemp);
+    })
+  }
 
 })
