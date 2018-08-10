@@ -1,128 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>品优购-购你想要</title>
   <link rel="stylesheet" href="/lib/mui/css/mui.css">
   <link rel="stylesheet" href="/lib/font/iconfont.css">
   <link rel="stylesheet" href="/css/comomon.css">
   <link rel="stylesheet" href="/css/index.css">
 
 </head>
+
 <body>
-  <header class="pyg_header"></header>
+  <header class="pyg_header">
+    <div class="mui-input-row mui-search">
+      <input type="search" class="mui-input-clear" placeholder="">
+    </div>
+  </header>
   <div class="pyg_view">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24</li>
-      <li>25</li>
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
-      <li>29</li>
-      <li>30</li>
-      <li>31</li>
-      <li>32</li>
-      <li>33</li>
-      <li>34</li>
-      <li>35</li>
-      <li>36</li>
-      <li>37</li>
-      <li>38</li>
-      <li>39</li>
-      <li>40</li>
-      <li>41</li>
-      <li>42</li>
-      <li>43</li>
-      <li>44</li>
-      <li>45</li>
-      <li>46</li>
-      <li>47</li>
-      <li>48</li>
-      <li>49</li>
-      <li>50</li>
-      <li>51</li>
-      <li>52</li>
-      <li>53</li>
-      <li>54</li>
-      <li>55</li>
-      <li>56</li>
-      <li>57</li>
-      <li>58</li>
-      <li>59</li>
-      <li>60</li>
-      <li>61</li>
-      <li>62</li>
-      <li>63</li>
-      <li>64</li>
-      <li>65</li>
-      <li>66</li>
-      <li>67</li>
-      <li>68</li>
-      <li>69</li>
-      <li>70</li>
-      <li>71</li>
-      <li>72</li>
-      <li>73</li>
-      <li>74</li>
-      <li>75</li>
-      <li>76</li>
-      <li>77</li>
-      <li>78</li>
-      <li>79</li>
-      <li>80</li>
-      <li>81</li>
-      <li>82</li>
-      <li>83</li>
-      <li>84</li>
-      <li>85</li>
-      <li>86</li>
-      <li>87</li>
-      <li>88</li>
-      <li>89</li>
-      <li>90</li>
-      <li>91</li>
-      <li>92</li>
-      <li>93</li>
-      <li>94</li>
-      <li>95</li>
-      <li>96</li>
-      <li>97</li>
-      <li>98</li>
-      <li>99</li>
-      <li>100</li>
-    </ul>
+    <div class="sliderHead">
+      <div class="mui-slider">
+        <!-- 占坑 sliderTemplate -->
+      </div>
+    </div>
+    <nav class="index_nav"></nav>
   </div>
   <footer class="pyg_footer"></footer>
-  
+
 </body>
+<script type="text/template" id="sliderTemplate">
+  <div class="mui-slider">
+    <div class="mui-slider-group mui-slider-loop">
+      <!--支持循环，需要重复图片节点-->
+      <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+          <img src="{{data[data.length-1].image_src}}" />
+        </a>
+      </div>
+      {{each data value index}}
+      <div class="mui-slider-item">
+        <a href="#">
+          <img src="{{value.image_src}}" />
+        </a>
+      </div>
+      {{/each}}
+      <!--支持循环，需要重复图片节点-->
+      <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+          <img src="{{data[0].image_src}}" />
+        </a>
+      </div>
+    </div>
+    <div class="mui-slider-indicator">
+      {{each data value index}}
+      {{if index==0}}
+      <div class="mui-indicator mui-active"></div>
+      {{/if}}
+      {{if index!=0}}
+      <div class="mui-indicator"></div>
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</script>
+
 <script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/mui/js/mui.js"></script>
 <script src="/lib/arttemplate/template-web.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/index.js"></script>
+
 </html>
