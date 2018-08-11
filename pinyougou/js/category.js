@@ -16,7 +16,7 @@ $(function () {
 
   function getCategories() {
     // http://api.pyg.ak48.xyz/api/public/v1/categories
-    $.get("http://api.pyg.ak48.xyz/api/public/v1/categories", function (res) {
+    $.get("categories", function (res) {
       // console.log(res);
       var categoriesTemp = template("categoriesTemplate", {
         data: res.data

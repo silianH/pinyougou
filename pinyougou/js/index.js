@@ -16,7 +16,7 @@ $(function () {
 
   // http://api.pyg.ak48.xyz/api/public/v1/home/swiperdata
   function getSwiperData() {
-    $.get("http://api.pyg.ak48.xyz/api/public/v1/home/swiperdata", function (res) {
+    $.get("home/swiperdata", function (res) {
       // console.log(res);
       var swiperTemp = template("sliderTemplate", {
         data: res.data
@@ -29,7 +29,7 @@ $(function () {
 
   // http://api.pyg.ak48.xyz/api/public/v1/home/catitems
   function getCatitems() {
-    $.get("http://api.pyg.ak48.xyz/api/public/v1/home/catitems",function (res) {
+    $.get("home/catitems",function (res) {
       console.log(res);
       var catitemsTemp = template("catitemsTemplate",{data:res.data});
       // console.log(catitemsTemp);
@@ -39,7 +39,7 @@ $(function () {
 
   // http://api.pyg.ak48.xyz/api/public/v1/home/goodslist
   function getGoodsList() {
-    $.get("http://api.pyg.ak48.xyz/api/public/v1/home/goodslist",function (res) {
+    $.get("home/goodslist",function (res) {
       // console.log(res);
       var goodsListTemp = template("goodslistTemplate",{data:res.data});
       // console.log(goodsListTemp);

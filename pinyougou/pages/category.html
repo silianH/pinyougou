@@ -18,6 +18,13 @@
     <div class="mui-input-row mui-search">
       <input type="search" class="mui-input-clear" placeholder="">
     </div>
+    <!-- 加 show 显示 加载层 -->
+    <div class="mask">
+      <div class="loading">
+        <img src="/image/loading-0.gif" alt="">
+      </div>
+    </div>
+
   </header>
   <div class="pyg_view">
     <div class="left" id="leftScroll">
@@ -107,7 +114,7 @@
       <ul>
         {{each value.children value1 index}}
         <li>
-          <a href="javascript:;">
+          <a href="good_list.html?cid={{value1.cat_id}}">
             <img src="http://api.pyg.ak48.xyz/{{value1.cat_icon}}" alt="">
             <span>{{value1.cat_name}}</span>
           </a>
