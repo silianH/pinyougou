@@ -25,7 +25,7 @@
 }
 
 .pyg_view .right {
-  overflow: hidden;
+  overflow: scroll;
   background-color: #fff;
   -webkit-box-flex: 1;
       -ms-flex: 1;

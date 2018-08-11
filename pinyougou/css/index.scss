@@ -1,7 +1,7 @@
 .pyg_view {
   .index_nav {
     display: flex;
-    padding: 5px 0;
+    padding: 0.05rem 0;
     a {
       height: 100%;
       flex: 1;
@@ -16,9 +16,9 @@
 .index_goodsList {
   .goods {
     
-    padding: 0 6px;
+    padding: 0 0.06rem;
     .goodsTitle {
-      margin-bottom: 6px;
+      margin-bottom: 0.06rem;
     }
     .goodsContent {
       ul {
@@ -27,31 +27,31 @@
         justify-content: space-between;
       }
       li {
-        padding: 6px;
-        margin-bottom: 6px;
+        padding: 0.06rem;
+        margin-bottom: 0.06rem;
         background-color: #fff;
         width: 49%;
         .messageImg {
-          max-height: 192px;
+          max-height: 1.92rem;
         }
         .goods_name {
-          padding-top: 5px;
-          height: 46px;
+          padding-top: 0.05rem;
+          height: .46rem;
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
-          font-size: 16px;
+          font-size: .16rem;
           color: #000;
-          line-height: 20px;
+          line-height: .2rem;
         }
         .goods_price {
           span {
-            font-size: 14px;
+            font-size: .14rem;
           }
           color: #f40;
-          font-size: 18px;
+          font-size: .18rem;
         }
         .likeness {
           text-align: center;

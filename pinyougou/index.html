@@ -35,11 +35,11 @@
     </div>
   </div>
   <footer class="pyg_footer">
-    <a href="javascript:;">
+    <a href="index.html">
       <span class="iconfont icon-fangzi"></span>
       <span class="link_name">首页</span>
     </a>
-    <a href="javascript:;">
+    <a href="/pages/category.html">
       <span class="iconfont icon-liebiao"></span>
       <span class="link_name">分类</span>
     </a>
@@ -88,7 +88,8 @@
 </script>
 <script type="text/template" id="catitemsTemplate">
   {{each data value}}
-  <a href="">
+  <a href="{{value.navigator_url
+  }}.html">
     <img src="{{value.image_src}}" alt="">
   </a>
   {{/each}}
