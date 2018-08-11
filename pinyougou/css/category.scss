@@ -3,7 +3,7 @@
   .left{
     width: .9rem;
     background-color: pink;
-    overflow: hidden;
+    overflow: scroll;
     background-color: #efefef;
     li{
       width: 100%;
@@ -22,17 +22,26 @@
     overflow: scroll;
     background-color: #fff;
     flex: 1;
-    >ul>li{
-      display: none;
-      &.checked{
-        display: block;
-      }
-    }
+    // >ul>li{
+    //   display: none;
+    //   &.checked{
+    //     display: block;
+    //   }
+    // }
     .right_title{
+      display: flex;
+      padding-right: .12rem;
       h3{
         color: #0094ff;
         font-size: 0.14rem;
-        padding: .05rem .2rem;
+        padding: .05rem .02rem .05rem .2rem;
+      }
+      span{
+        flex: 1;
+        align-self: center;
+        height: 1px;
+        background: linear-gradient(90deg,#0094ff,#d3edff);
+        // border-bottom: 0.01rem dashed #0094ff;
       }
     }
     .right_content{

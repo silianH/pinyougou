@@ -3,14 +3,15 @@ $(function () {
 
   function init() {
     getCategories();
+    clickCategories();
   }
   // 滚动插件
   function loaded() {
     // myScroll1 = new IScroll('#rightScroll');
-    // $("img").on("load", function () {
-    //   rightScroll = new IScroll('#rightScroll');
-    // });
-    leftScroll = new IScroll('#leftScroll');
+    $(".right .checked img").on("load", function () {
+      // console.log(123);
+      
+    });
   }
 
   function getCategories() {
@@ -22,25 +23,47 @@ $(function () {
       });
       // console.log(categoriesTemp);
       $(".left").html(categoriesTemp);
-      var cgContentTemp = template("cgContentTemplate", {
-        data: res.data
-      });
+      leftScroll = new IScroll('#leftScroll');
+      // var cgContentTemp = template("cgContentTemplate", {data: res.data});
       // console.log(cgContentTemp);
-      $(".right").html(cgContentTemp);
-      clickCategories();
-      loaded();
+      // $(".right").html(cgContentTemp);
+      // loaded();
+      Datas = res.data;
+      renderRight(0);
     });
   }
   var CategoriesIndex = 0;
 
   function clickCategories() {
-    $(".left>ul>li").on("tap", function () {
+    $(".left").on("tap", "li", function () {
       // console.log($(this).index());
-      CategoriesIndex = $(this).index();
-      console.log(CategoriesIndex);
+      var CategoriesIndex = $(this).index();
+      // console.log(CategoriesIndex);
       $(this).addClass("checked").siblings().removeClass("checked");
-      $(".right>ul>li").eq(CategoriesIndex).addClass("checked").siblings().removeClass("checked");
+      // $(".right>ul>li").eq(CategoriesIndex).addClass("checked").siblings().removeClass("checked");
+      // loaded();
+      leftScroll.scrollToElement(this);
+      renderRight(CategoriesIndex);
     })
+  }
+
+  // 根据索引来渲染右侧的数据
+  function renderRight(index) {
+    // console.log(index);
+    
+    var arr = Datas[index].children;
+    // console.log(arr);
+    var cgContentTemp = template("cgContentTemplate",{arr:arr});
+    // console.log(cgContentTemp); 
+    $(".right").html(cgContentTemp);
+
+    var nums = $(".right img").length;
+    $(".right img").on("load",function () {
+      nums--;
+      if (nums==0) {
+        rightScroll = new IScroll('#rightScroll');
+      }
+    });
   }
 
 })

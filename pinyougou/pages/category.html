@@ -27,6 +27,40 @@
     </div>
     <div class="right" id="rightScroll">
       <!-- 占坑 cgContentTemplate -->
+      <div>
+        <div class="right_title">
+          <h3>大家电</h3>
+          <span></span>
+        </div>
+        <div class="right_content">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <img src="http://api.pyg.ak48.xyz/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                <span>曲面电视</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <img src="http://api.pyg.ak48.xyz/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                <span>曲面电视</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <img src="http://api.pyg.ak48.xyz/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                <span>曲面电视</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <img src="http://api.pyg.ak48.xyz/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                <span>曲面电视</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   <footer class="pyg_footer">
@@ -63,51 +97,26 @@
   </ul>
 </script>
 <script type="text/template" id="cgContentTemplate">
-  <ul>
-    {{each data value index}} {{if index==0}}
-    <li class="checked">
-      {{each value.children value1 index1}}
-      <div class="right_title">
-        <h3>{{value1.cat_name}}</h3>
-        <span></span>
-      </div>
-      <div class="right_content">
-        <ul>
-          {{each value1.children value2 index2}}
-          <li>
-            <a href="javascript:;">
-              <img src="http://api.pyg.ak48.xyz/{{value2.cat_icon}}" alt="">
-              <span>{{value2.cat_name}}</span>
-            </a>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-      {{/each}}
-    </li>
-    {{else}}
-    <li>
-      {{each value.children value1 index1}}
-      <div class="right_title">
-        <h3>{{value1.cat_name}}</h3>
-        <span></span>
-      </div>
-      <div class="right_content">
-        <ul>
-          {{each value1.children value2 index2}}
-          <li>
-            <a href="javascript:;">
-              <img src="http://api.pyg.ak48.xyz/{{value2.cat_icon}}" alt="">
-              <span>{{value2.cat_name}}</span>
-            </a>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-      {{/each}}
-    </li>
-    {{/if}} {{/each}}
-  </ul>
+  <div>
+    {{each arr value index}}
+    <div class="right_title">
+      <h3>{{value.cat_name}}</h3>
+      <span></span>
+    </div>
+    <div class="right_content">
+      <ul>
+        {{each value.children value1 index}}
+        <li>
+          <a href="javascript:;">
+            <img src="http://api.pyg.ak48.xyz/{{value1.cat_icon}}" alt="">
+            <span>{{value1.cat_name}}</span>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/each}}
+  </div>
 </script>
 <script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/mui/js/mui.js"></script>
