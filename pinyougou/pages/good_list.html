@@ -136,7 +136,7 @@
 <script type="text/template" id="listTemplate">
   {{each arr value index}}
   <li>
-    <a href="javascript:;">
+    <a href="/pages/goods_detail.html?goods_id={{value.goods_id}}">
       <div class="goods_img">
         <img src="{{value.goods_big_logo}}" alt="">
       </div>
@@ -146,6 +146,7 @@
           <span>￥</span>{{value.goods_price}}</p>
       </div>
     </a>
+    <a class="url" href="/pages/goods_detail.html?goods_id={{value.goods_id}}"></a>
   </li>
   {{/each}}
 </script>

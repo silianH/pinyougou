@@ -49,7 +49,7 @@
 
 .index_goodsList .goods .goodsContent li .goods_name {
   padding-top: 0.05rem;
-  height: .46rem;
+  height: .44rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

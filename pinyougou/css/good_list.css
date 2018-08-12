@@ -68,6 +68,7 @@ body {
 
 .pyg_view .goods_list ul li {
   padding-bottom: .04rem;
+  position: relative;
 }
 
 .pyg_view .goods_list ul li a {
@@ -135,5 +136,14 @@ body {
 .pyg_view .goods_list ul li a .goods_content .item_price span {
   font-size: .14rem;
   font-weight: 500;
+}
+
+.pyg_view .goods_list ul li .url {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: initial;
 }
 /*# sourceMappingURL=good_list.css.map */

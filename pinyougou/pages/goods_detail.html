@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>品优购-购你想要</title>
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/font/iconfont.css">
+  <link rel="stylesheet" href="/css/comomon.css">
+  <link rel="stylesheet" href="/css/goods_detail.css">
+
+</head>
+
+<body>
+  <header class="pyg_header">
+    <a href="javascript" class="iconfont icon-fanhuijiantouxiangqingye"></a>
+    <h2>商品详情</h2>
+    <a href="javascript"></a>
+    <!-- 加 show 显示 加载层 -->
+    <div class="mask">
+      <div class="loading">
+        <img src="/image/loading-0.gif" alt="">
+      </div>
+    </div>
+  </header>
+  <div class="pyg_view">
+    <div class="view_slider">
+      <!-- 占坑 sliderTemplate -->
+    </div>
+    <div class="view_goods">
+      <div class="goods_name">创维彩电40G6A</div>
+      <div class="goods_price">
+        <span>￥</span>998</div>
+      <div class="goods_attr">
+        <ul>
+          <li>
+            <span>已选</span>
+            <span>白色</span>
+          </li>
+          <li>
+            <span>促销</span>
+            <span>是</span>
+          </li>
+          <li>
+            <span>送至</span>
+            <span>上海市</span>
+          </li>
+          <li>
+            <span>运费</span>
+            <span>免运费</span>
+          </li>
+        </ul>
+      </div>
+      <div class="goods_tab">
+        <div>
+          <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-primary">
+            <a class="mui-control-item mui-active" href="#item1">
+              图文详情
+            </a>
+            <a class="mui-control-item" href="#item2">
+              规格参数
+            </a>
+
+          </div>
+        </div>
+        <div id="item1" class="mui-control-content mui-active">
+          
+          <!-- goods_introduce 一堆标签 -->
+        </div>
+        <div id="item2" class="mui-control-content mui-active parameter">
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <th colspan="2">主体</th>
+                </tr>
+                <tr></tr>
+                <tr>
+                  <td> 商品名称</td>
+                  <td>创维彩电40G6A</td>
+                </tr>
+                <tr>
+                  <th colspan="2">显示</th>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                  <td> 曲面</td>
+                  <td>否</td>
+                </tr>
+                <tr>
+                  <th colspan="2">系统</th>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                  <td>智能电视</td>
+                  <td>智能电视</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="pyg_footer">
+    <a href="index.html">
+      <span class="iconfont icon-fangzi"></span>
+      <span class="link_name">首页</span>
+    </a>
+    <a href="/pages/category.html">
+      <span class="iconfont icon-liebiao"></span>
+      <span class="link_name">分类</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-gouwuche"></span>
+      <span class="link_name">购物车</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-wode"></span>
+      <span class="link_name">用户</span>
+    </a>
+  </footer>
+
+</body>
+<script type="text/template" id="sliderTemplate">
+  <div class="mui-slider">
+    <div class="mui-slider-group mui-slider-loop">
+      <!--支持循环，需要重复图片节点-->
+      <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+          <img src="{{arr[arr.length-1].pics_sma}}" />
+        </a>
+      </div>
+      {{each arr value index}}
+      <div class="mui-slider-item">
+        <a href="#">
+          <img src="{{value.pics_sma}}" />
+        </a>
+      </div>
+      {{/each}}
+      <!--支持循环，需要重复图片节点-->
+      <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+          <img src="{{arr[0].pics_sma}}" />
+        </a>
+      </div>
+    </div>
+    <div class="mui-slider-indicator">
+      {{each arr value index}}
+      {{if index==0}}
+      <div class="mui-indicator mui-active"></div>
+      {{/if}}
+      {{if index!=0}}
+      <div class="mui-indicator"></div>
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</script>
+<script type="text/template" id="goodsTemplate">
+  <div class="goods_name">{{arr.goods_name}}</div>
+  <div class="goods_price">
+    <span>￥</span>{{arr.goods_price}}</div>
+  <div class="goods_attr">
+    <ul>
+      <li>
+        <span>已选</span>
+        <span>白色</span>
+      </li>
+      <li>
+        <span>促销</span>
+        <span>是</span>
+      </li>
+      <li>
+        <span>送至</span>
+        <span>上海市</span>
+      </li>
+      <li>
+        <span>运费</span>
+        <span>免运费</span>
+      </li>
+    </ul>
+  </div>
+  <div class="goods_tab">
+    <div>
+      <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-primary">
+        <a class="mui-control-item mui-active" href="#item1">
+          图文详情
+        </a>
+        <a class="mui-control-item" href="#item2">
+          规格参数
+        </a>
+      </div>
+    </div>
+    <div id="item1" class="mui-control-content mui-active">
+      <!-- goods_introduce 一堆标签 -->
+      {{@ arr.goods_introduce}}
+    </div>
+    <div id="item2" class="mui-control-content parameter">
+      <div>
+        <table>
+          <tbody>
+            {{each arr.attrs value index}}
+            <tr>
+              <th colspan="2">{{value.attr_name.split("-")[0]}}</th>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td>{{value.attr_name.split("-")[1]}}</td>
+              <td>{{value.attr_value}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/mui/js/mui.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/goods_detail.js"></script>
+
+</html>
