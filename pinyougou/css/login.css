@@ -1,0 +1,33 @@
+.pyg_view {
+  padding-top: .2rem;
+}
+
+.pyg_view .login_box {
+  padding: .1rem;
+}
+
+.pyg_view .login_box #login {
+  width: 100%;
+  font-size: .20rem;
+}
+
+.pyg_view .register_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: .2rem;
+}
+
+.pyg_view .register_box a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: .01rem .2rem;
+  color: #007aff;
+}
+
+.pyg_view .register_box a:nth-child(1) {
+  text-align: right;
+  border-right: .02rem solid #ccc;
+}
+/*# sourceMappingURL=login.css.map */

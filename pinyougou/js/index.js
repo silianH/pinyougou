@@ -30,7 +30,7 @@ $(function () {
   // http://api.pyg.ak48.xyz/api/public/v1/home/catitems
   function getCatitems() {
     $.get("home/catitems",function (res) {
-      console.log(res);
+      // console.log(res);
       var catitemsTemp = template("catitemsTemplate",{data:res.data});
       // console.log(catitemsTemp);
       $(".index_nav").html(catitemsTemp);
@@ -40,7 +40,7 @@ $(function () {
   // http://api.pyg.ak48.xyz/api/public/v1/home/goodslist
   function getGoodsList() {
     $.get("home/goodslist",function (res) {
-      // console.log(res);
+      console.log(res);
       var goodsListTemp = template("goodslistTemplate",{data:res.data});
       // console.log(goodsListTemp);
       $(".goods").html(goodsListTemp);

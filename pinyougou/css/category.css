@@ -42,19 +42,21 @@
 .pyg_view .right .right_title h3 {
   color: #0094ff;
   font-size: 0.14rem;
-  padding: .05rem .04rem .05rem .2rem;
+  line-height: 1;
+  padding: .05rem .06rem .05rem .2rem;
 }
 
-.pyg_view .right .right_title span {
+.pyg_view .right .right_title div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 1px;
+  height: 0.01rem;
   background: -webkit-gradient(linear, left top, right top, from(#0094ff), to(#d3edff));
   background: linear-gradient(90deg, #0094ff, #d3edff);
+  margin: auto;
 }
 
 .pyg_view .right .right_content ul {

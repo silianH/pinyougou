@@ -31,17 +31,21 @@
     .right_title{
       display: flex;
       padding-right: .12rem;
+      // align-items: center;
       h3{
         color: #0094ff;
         font-size: 0.14rem;
-        padding: .05rem .04rem .05rem .2rem;
+        // text-align: center;
+        line-height: 1;
+        padding: .05rem .06rem .05rem .2rem;
       }
-      span{
+      div{
         flex: 1;
         align-self: center;
-        height: 1px;
+        height: 0.01rem;
         background: linear-gradient(90deg,#0094ff,#d3edff);
         // border-bottom: 0.01rem dashed #0094ff;
+        margin: auto;
       }
     }
     .right_content{

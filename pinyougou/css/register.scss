@@ -1,0 +1,23 @@
+.pyg_view{
+  padding-top: .2rem;
+  .mui-input-row{
+    position: relative;
+    
+    #code_btn{
+      position: absolute;
+      right: .10rem;
+      z-index: 2;
+      width: initial;
+    }
+  }
+  #register_box{
+    margin-top: .1rem;
+    display: flex;
+    padding: .1rem;
+    button{
+      flex: 1;
+      font-size: .2rem;
+      margin: .04rem;
+    }
+  }
+}

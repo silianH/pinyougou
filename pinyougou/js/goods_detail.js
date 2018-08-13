@@ -36,9 +36,10 @@ $(function () {
       var goodsTemp = template("goodsTemplate",{arr:res.data});
       $(".view_goods").html(goodsTemp);
       console.log(res.data.attrs[0].attr_name.split("-"));
-      
     })
 
   }
+
+  
 
 })

@@ -29,6 +29,32 @@ body {
   padding: 45px 0 50px;
 }
 
+.pages_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pages_header a {
+  font-weight: 600;
+  color: #007aff;
+  font-size: 18px;
+  line-height: 1;
+  width: 10%;
+}
+
+.pages_header h2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .pyg_header {
   z-index: 2;
   width: 100%;
@@ -42,7 +68,7 @@ body {
           box-shadow: 0px 2px 8px 0px #999;
 }
 
-.pyg_header .mask {
+.mask {
   background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
   display: none;
@@ -52,11 +78,11 @@ body {
   left: 0;
 }
 
-.pyg_header .mask.show {
+.mask.show {
   display: block;
 }
 
-.pyg_header .mask .loading {
+.mask .loading {
   width: .8rem;
   position: absolute;
   left: 50%;

@@ -24,6 +24,8 @@ $(function () {
   var totalPage = 1;
 
   function init() {
+    // a 标签跳转
+    eventList();
     mui.init({
       pullRefresh: {
         container: '.goods_list',
@@ -74,6 +76,16 @@ $(function () {
       $(".goods_list ul").append(html);
       // console.log(html);
       callback && callback();
+      // ceshi();
+    })
+  }
+
+  function eventList() {
+    $(".pyg_view .goods_list").on("tap", "a", function () {
+      // console.log($(this));
+      var href = this.href;
+      location.href = href;
+
     })
   }
 

@@ -1,0 +1,31 @@
+.pyg_view {
+  padding-top: .2rem;
+}
+
+.pyg_view .mui-input-row {
+  position: relative;
+}
+
+.pyg_view .mui-input-row #code_btn {
+  position: absolute;
+  right: .10rem;
+  z-index: 2;
+  width: initial;
+}
+
+.pyg_view #register_box {
+  margin-top: .1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .1rem;
+}
+
+.pyg_view #register_box button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: .2rem;
+  margin: .04rem;
+}
+/*# sourceMappingURL=register.css.map */

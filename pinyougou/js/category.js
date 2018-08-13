@@ -4,13 +4,14 @@ $(function () {
   function init() {
     getCategories();
     clickCategories();
+    eventList();
   }
   // 滚动插件
   function loaded() {
     // myScroll1 = new IScroll('#rightScroll');
     $(".right .checked img").on("load", function () {
       // console.log(123);
-      
+
     });
   }
 
@@ -50,20 +51,30 @@ $(function () {
   // 根据索引来渲染右侧的数据
   function renderRight(index) {
     // console.log(index);
-    
+
     var arr = Datas[index].children;
     // console.log(arr);
-    var cgContentTemp = template("cgContentTemplate",{arr:arr});
+    var cgContentTemp = template("cgContentTemplate", {
+      arr: arr
+    });
     // console.log(cgContentTemp); 
     $(".right").html(cgContentTemp);
 
     var nums = $(".right img").length;
-    $(".right img").on("load",function () {
+    $(".right img").on("load", function () {
       nums--;
-      if (nums==0) {
+      if (nums == 0) {
         rightScroll = new IScroll('#rightScroll');
       }
     });
+  }
+
+  function eventList() {
+    $(".right").on("tap", "a", function () {
+      // console.log($(this));
+      var href = this.href;
+      location.href = href;
+    })
   }
 
 })
