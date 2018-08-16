@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/font/iconfont.css">
+  <link rel="stylesheet" href="/css/comomon.css">
+  <link rel="stylesheet" href="/css/cart.css">
+
+</head>
+
+<!-- class="openCompile" -->
+<body id="openCompile" >
+  <header class="pyg_header pages_header">
+    <a href="javascript:;" class="delete_btn">
+      <button type="button" class="mui-btn mui-btn-danger mui-btn-outlined" data-loading-icon-position="right">删除</button>
+    </a>
+    <h2>购物车</h2>
+    <a href="javascript:;" class="compile_btn">
+      <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined" data-loading-icon-position="right">编辑</button>
+    </a>
+    <!-- 加 show 显示 加载层 -->
+    <div class="mask">
+      <div class="loading">
+        <img src="/image/loading-0.gif" alt="">
+      </div>
+    </div>
+  </header>
+  <div class="pyg_view">
+    <div class="site">
+      <div class="cart_title">
+        配送地址
+      </div>
+      <div class="site_content cart_content iconfont icon-jinrujiantouxiao1">
+        <span class="iconfont icon-mudedi"></span>
+        <div class="">
+          默认地址
+          <p>中国广东汕头</p>
+        </div>
+      </div>
+    </div>
+    <div class="orderForm">
+      <div class="cart_title">
+        订单
+      </div>
+      <div class="orderForm_content cart_content iconfont icon-jinrujiantouxiao1">
+        <div class="totalPrice">
+          总价:
+          <em>￥</em>
+          <span class="price_num">998</span>
+        </div>
+        <a href="javascript:;" class="createOrder">生成订单</a>
+      </div>
+    </div>
+    <div class="BuyCart">
+      <div class="cart_title">
+        购物车
+      </div>
+      <div class="BuyCart_content cart_content">
+        <ul>
+          <li>
+            <div class="goods_input mui-input-row mui-checkbox">
+              <input class="goods_chk" name="goods_ratio" type="checkbox">
+            </div>
+            <div class="goods_img">
+              <img src="http://image3.suning.cn/uimg/b2c/newcatentries/0070117318-000000000126072701_1_400x400.jpg" alt="">
+            </div>
+            <div class="item_info">
+              <p class="mui-ellipsis-2">美的电风扇落地扇 家用立式学生静音FS40-11L1台式大电扇寝室宿舍美的电风扇落地扇 家用立式学生静音FS40-11L1台式大电扇寝室宿舍</p>
+              <span class="li_price">
+                <em>￥</em>167</span>
+              <div class="mui-numbox">
+                <!-- "-"按钮，点击可减小当前数值 -->
+                <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                <input class="mui-numbox-input" type="number" />
+                <!-- "+"按钮，点击可增大当前数值 -->
+                <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="pyg_footer">
+    <a href="/index.html">
+      <span class="iconfont icon-fangzi"></span>
+      <span class="link_name">首页</span>
+    </a>
+    <a href="/pages/category.html">
+      <span class="iconfont icon-liebiao"></span>
+      <span class="link_name">分类</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-gouwuche"></span>
+      <span class="link_name">购物车</span>
+    </a>
+    <a href="javascript:;">
+      <span class="iconfont icon-wode"></span>
+      <span class="link_name">用户</span>
+    </a>
+  </footer>
+
+</body>
+<script type="text/template" id="cartTemp">
+  {{each obj value key}}
+  <li>
+    <div class="goods_input mui-input-row mui-checkbox">
+      <input class="goods_chk" name="goods_ratio" type="checkbox">
+    </div>
+    <div class="goods_img">
+      <img src="{{value.goods_small_logo}}" alt="">
+    </div>
+    <div class="item_info">
+      <p class="mui-ellipsis-2">{{value.goods_name}}</p>
+      <span class="li_price">
+        <em>￥</em><span>{{value.goods_price}}</span></span>
+      <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{value.goods_number}}" data-numbox-step="1">
+        <!-- "-"按钮，点击可减小当前数值 -->
+        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+        <input class="mui-numbox-input" type="number" value="{{value.amount}}" />
+        <!-- "+"按钮，点击可增大当前数值 -->
+        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/mui/js/mui.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/lib/fastclick/fastclick.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/cart.js"></script>
+
+</html>

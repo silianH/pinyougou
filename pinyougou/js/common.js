@@ -67,7 +67,22 @@ $(function () {
       } else {
         return false;
       }
+    },
+    // 判断永久存储中是否有userinfo
+    checkLogin:function () {
+      return localStorage.getItem("userinfo");
+    },
+    token:function () {
+      // 如果userinfo 存在 则返回token 反之返回"";
+      var token;
+      if (!localStorage.getItem("userinfo")) {
+        token = "";
+      } else {
+        token = JSON.parse(localStorage.getItem("userinfo")).token;
+      }
+      return token;
     }
+
   });
 
   // fastclick初始化代码

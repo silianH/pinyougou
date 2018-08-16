@@ -37,10 +37,19 @@ $(function () {
       }, function (res) {
         if (res.meta.status == 200) {
           mui.toast(res.meta.msg);
-          setTimeout(function () {
-            location.href = "/index.html";
 
-          }, 1000)
+          // 把用户信息存入永久存储中
+          localStorage.setItem("userinfo",JSON.stringify(res.data));
+          setTimeout(function () {
+            // location.href = "/index.html";
+            // 先判断有没有来源页面，如果没有再跳转到首页
+            var pageName = sessionStorage.getItem("pageName");
+            if (pageName) {
+              location.href = pageName;
+            } else {
+              location.href = "/index.html";
+            }
+          }, 1000);
         } else {
           mui.toast(res.meta.msg);
         }

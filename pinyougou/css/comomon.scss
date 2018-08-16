@@ -37,7 +37,18 @@ body {
     color: #007aff;
     font-size: 18px;
     line-height: 1;
-    width: 10%;
+    width: 20%;
+    position: relative;
+  }
+  a:nth-child(1){
+    button{
+      float: left;
+    }
+  }
+  a:nth-child(3){
+    button{
+      float: right;
+    }
   }
   h2 {
     flex: 1;

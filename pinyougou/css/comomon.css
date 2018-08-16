@@ -43,7 +43,16 @@ body {
   color: #007aff;
   font-size: 18px;
   line-height: 1;
-  width: 10%;
+  width: 20%;
+  position: relative;
+}
+
+.pages_header a:nth-child(1) button {
+  float: left;
+}
+
+.pages_header a:nth-child(3) button {
+  float: right;
 }
 
 .pages_header h2 {

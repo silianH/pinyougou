@@ -1,0 +1,132 @@
+.delete_btn {
+  button {
+    display: none;
+  }
+}
+
+.pyg_view {
+  >div {
+    margin-top: .26rem;
+    padding: 0 .1rem;
+  }
+  .cart_title {
+    font-size: .14rem;
+    color: #666;
+  }
+  .cart_content {
+    background-color: #fff;
+    position: relative;
+    border: .01rem solid #ccc;
+    border-left: none;
+    border-right: none;
+    padding: .1rem .04rem;
+    &::before {
+      right: .06rem;
+      top: 50%;
+      line-height: 1;
+      color: #ccc;
+      transform: translateY(-50%);
+      position: absolute;
+    }
+  }
+  .site {
+    .site_content {
+      display: flex;
+      span {
+        flex: 1;
+        display: flex;
+        line-height: 1;
+        justify-content: center;
+        align-items: center;
+        font-size: .26rem;
+      }
+      div {
+        flex: 6;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          padding-top: .06rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .orderForm {
+    .orderForm_content {
+      display: flex;
+      font-size: .18rem;
+      padding: .1rem .30rem .1rem .20rem;
+      >div {
+        flex: 1;
+        em {
+          font-style: normal;
+          font-size: .14rem; // color: #f40;
+        }
+        span {
+          font-weight: 600;
+          color: #888;
+        }
+      }
+      >a {
+        flex: 1;
+        color: #f40;
+        text-align: right;
+        font-weight: 600;
+      }
+    }
+  }
+  .BuyCart {
+    .BuyCart_content {
+      ul li {
+        display: flex;
+        .goods_input {
+          display: none;
+          flex: 1;
+          position: relative;
+          input {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+          }
+        }
+        .goods_img {
+          flex: 3;
+          img {
+            margin: 0 auto;
+            width: 70%;
+          }
+        }
+        .item_info {
+          flex: 7;
+          span {
+            em {
+              font-size: .14rem;
+              font-style: normal;
+            }
+          }
+        }
+        .mui-numbox {
+          float: right;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#openCompile.openCompile {
+  .delete_btn {
+    button {
+      display: initial;
+    }
+  }
+  .goods_input {
+    display: initial;
+  }
+  .mui-numbox {
+    display: initial;
+  }
+}
