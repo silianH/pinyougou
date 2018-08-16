@@ -61,6 +61,7 @@ $(function () {
         }
       }
     });
+    clickSeek();
   }
 
   // search();
@@ -80,12 +81,21 @@ $(function () {
     })
   }
 
+
   function eventList() {
     $(".pyg_view .goods_list").on("tap", "a", function () {
       // console.log($(this));
       var href = this.href;
       location.href = href;
+    })
+  }
 
+  // 点击搜索
+  function clickSeek() {
+    $(".seekBtn a").on("click",function () {
+      console.log($(this));
+      console.log($(".mui-input-clear").val());
+      
     })
   }
 

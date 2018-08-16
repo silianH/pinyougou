@@ -1,0 +1,49 @@
+.tab_title {
+  background-color: #fff;
+}
+
+.tab_content #item1, .tab_content #item2, .tab_content #item3 {
+  padding: .1rem;
+}
+
+.tab_content #item1 ul, .tab_content #item2 ul, .tab_content #item3 ul {
+  background-color: #fff;
+  border: .02rem solid #ccc;
+  border-radius: .06rem;
+  padding: .06rem .16rem;
+}
+
+.tab_content #item1 ul li, .tab_content #item2 ul li, .tab_content #item3 ul li {
+  border-bottom: .01rem solid #ccc;
+  padding: .06rem 0;
+}
+
+.tab_content #item1 ul li:last-child, .tab_content #item2 ul li:last-child, .tab_content #item3 ul li:last-child {
+  border: none;
+}
+
+.tab_content #item1 ul li a, .tab_content #item2 ul li a, .tab_content #item3 ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab_content #item1 ul li a .orderForm, .tab_content #item2 ul li a .orderForm, .tab_content #item3 ul li a .orderForm {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.tab_content #item1 ul li a .orderForm_price, .tab_content #item2 ul li a .orderForm_price, .tab_content #item3 ul li a .orderForm_price {
+  color: #f40;
+  font-size: .18rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+.tab_content #item1 ul li a .orderForm_price span, .tab_content #item2 ul li a .orderForm_price span, .tab_content #item3 ul li a .orderForm_price span {
+  font-size: .14rem;
+}
+/*# sourceMappingURL=orders.css.map */

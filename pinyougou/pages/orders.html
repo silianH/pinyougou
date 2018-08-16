@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>品优购-查询订单</title>
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/font/iconfont.css">
+  <link rel="stylesheet" href="/css/comomon.css">
+  <link rel="stylesheet" href="/css/orders.css">
+
+</head>
+
+<body>
+  <header class="pyg_header pages_header">
+    <a href="javascript:;" class="iconfont icon-fanhuijiantouxiangqingye" id="previous_page"></a>
+    <h2>查询订单</h2>
+    <a href="javascript"></a>
+    <!-- 加 show 显示 加载层 -->
+    <div class="mask">
+      <div class="loading">
+        <img src="/image/loading-0.gif" alt="">
+      </div>
+    </div>
+  </header>
+  <div class="pyg_view">
+    <div class="tab_title">
+      <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+        <a class="mui-control-item mui-active" href="#item1">全部</a>
+        <a class="mui-control-item" href="#item2">待付款</a>
+        <a class="mui-control-item" href="#item3">待发货</a>
+      </div>
+    </div>
+    <div class="tab_content">
+      <div id="item1" class="mui-control-content mui-active">
+        <ul>
+          <!-- <li>
+            <a href="javascript:;">
+              <div class="orderForm">
+                <div class="orderForm_title">订单编号:</div>
+                <div class="orderForm_num">GD20180816000000000323</div>
+              </div>
+              <div class="orderForm_price">
+                <span>￥</span>2082
+              </div>
+            </a>
+          </li> -->
+          <!-- 占坑 -->
+        </ul>
+      </div>
+      <div id="item2" class="mui-control-content">
+        <ul>
+          
+        </ul>
+      </div>
+      <div id="item3" class="mui-control-content">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+  <footer class="pyg_footer">
+    <a href="/index.html">
+      <span class="iconfont icon-fangzi"></span>
+      <span class="link_name">首页</span>
+    </a>
+    <a href="/pages/category.html">
+      <span class="iconfont icon-liebiao"></span>
+      <span class="link_name">分类</span>
+    </a>
+    <a href="/pages/cart.html">
+      <span class="iconfont icon-gouwuche"></span>
+      <span class="link_name">购物车</span>
+    </a>
+    <a href="/pages/me.html">
+      <span class="iconfont icon-wode"></span>
+      <span class="link_name">用户</span>
+    </a>
+  </footer>
+</body>
+<script type="text/template" id="ordersTemplate">
+  {{each data value index}}
+  <li>
+    <a href="javascript:;">
+      <div class="orderForm">
+        <div class="orderForm_title">订单编号:</div>
+        <div class="orderForm_num">{{value.order_number}}</div>
+      </div>
+      <div class="orderForm_price">
+        <span>￥</span>{{value.order_price}}
+      </div>
+    </a>
+  </li>
+  {{/each}}
+  {{if data.length==0}}
+  <li>请添加订单</li>
+  {{/if}}
+</script>
+<script src="/lib/mui/js/mui.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/orders.js"></script>
+
+</html>

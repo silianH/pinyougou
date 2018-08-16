@@ -1,0 +1,127 @@
+.pyg_view {
+  padding: .2rem .1rem;
+}
+
+.pyg_view > div {
+  padding: .1rem;
+  border: .01rem solid #ccc;
+  border-radius: .04rem;
+  background-color: #fff;
+  margin-bottom: .1rem;
+}
+
+.pyg_view .my {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .my .my_img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view .my .my_img span {
+  font-size: .36rem;
+  line-height: 1;
+}
+
+.pyg_view .my .my_content {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.pyg_view .my .my_content .my_emil {
+  font-size: .14rem;
+  color: #666;
+}
+
+.pyg_view .orderManagement {
+  padding: .1rem 0;
+}
+
+.pyg_view .orderManagement .oM_title {
+  line-height: 1;
+  padding: 0 .1rem .1rem;
+  border-bottom: .01rem solid #ccc;
+}
+
+.pyg_view .orderManagement .oM_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: .06rem;
+}
+
+.pyg_view .orderManagement .oM_nav a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pyg_view .orderManagement .oM_nav a span {
+  line-height: 1;
+  padding: .02rem;
+  font-size: .14rem;
+  color: #007aff;
+  text-align: center;
+}
+
+.pyg_view .orderManagement .oM_nav a span.iconfont {
+  font-size: .26rem;
+}
+
+.pyg_view .my_else {
+  padding: 0 .12rem;
+}
+
+.pyg_view .my_else ul li {
+  border-bottom: .01rem solid #ccc;
+}
+
+.pyg_view .my_else ul li:last-child {
+  border: none;
+}
+
+.pyg_view .my_else ul li a {
+  position: relative;
+  font-size: .16rem;
+  line-height: 1;
+  padding: .14rem 0;
+}
+
+.pyg_view .my_else ul li a span {
+  position: absolute;
+  right: 0;
+}
+
+.pyg_view .my_else ul li a::before {
+  position: absolute;
+  right: 0;
+}
+
+.pyg_view .out_btn {
+  border-radius: .06rem;
+  background-color: #dd524d;
+  padding: 0;
+}
+
+.pyg_view .out_btn a {
+  text-align: center;
+  color: #fff;
+  font-size: .18rem;
+  padding: .18rem;
+}
+/*# sourceMappingURL=me.css.map */

@@ -69,10 +69,10 @@ $(function () {
       }
     },
     // 判断永久存储中是否有userinfo
-    checkLogin:function () {
+    checkLogin: function () {
       return localStorage.getItem("userinfo");
     },
-    token:function () {
+    token: function () {
       // 如果userinfo 存在 则返回token 反之返回"";
       var token;
       if (!localStorage.getItem("userinfo")) {
@@ -81,6 +81,9 @@ $(function () {
         token = JSON.parse(localStorage.getItem("userinfo")).token;
       }
       return token;
+    },
+    setPage: function () {
+      sessionStorage.setItem("pageName", location.href);
     }
 
   });

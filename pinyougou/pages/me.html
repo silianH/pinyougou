@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>品优购-用户中心</title>
+  <link rel="stylesheet" href="/lib/mui/css/mui.css">
+  <link rel="stylesheet" href="/lib/font/iconfont.css">
+  <link rel="stylesheet" href="/css/comomon.css">
+  <link rel="stylesheet" href="/css/me.css">
+
+</head>
+
+<body>
+  <header class="pyg_header pages_header">
+    <a href="javascript:;" class="iconfont icon-fanhuijiantouxiangqingye" id="previous_page"></a>
+    <h2>用户中心</h2>
+    <a href="javascript"></a>
+    <!-- 加 show 显示 加载层 -->
+    <div class="mask">
+      <div class="loading">
+        <img src="/image/loading-0.gif" alt="">
+      </div>
+    </div>
+  </header>
+  <div class="pyg_view">
+    <div class="my">
+      <div class="my_img">
+        <span class="iconfont icon-changyongxinxi"></span>
+      </div>
+      <div class="my_content">
+        <div class="my_phone">13144258888</div>
+        <div class="my_emil">888@qq.com</div>
+      </div>
+
+    </div>
+    <div class="orderManagement">
+      <div class="oM_title">订单管理</div>
+      <div class="oM_nav">
+        <a href="javascript:;">
+          <span class="iconfont icon-dingdandaifukuan"></span>
+          <span>待付款</span>
+        </a>
+        <a href="javascript:;">
+          <span class="iconfont icon-dingdan"></span>
+          <span>待收货</span>
+        </a>
+        <a href="javascript:;">
+          <span class="iconfont icon-dingdanchulizhong"></span>
+          <span>退款/售后</span>
+        </a>
+        <a href="javascript:;">
+          <span class="iconfont icon-dingdanjihe"></span>
+          <span>全部订单</span>
+        </a>
+      </div>
+    </div>
+    <div class="my_else">
+      <ul>
+        <li>
+          <a href="javascript:;" class="iconfont icon-jinrujiantouxiao1">
+            修改登录密码
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="iconfont icon-jinrujiantouxiao1">
+            支付密码登录
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="iconfont icon-jinrujiantouxiao1">
+            收货地址管理
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="my_else">
+      <ul>
+        <li>
+          <a href="javascript:;" class="">
+            联系客服
+            <span>4000-xxx-xxx-xxx</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="iconfont icon-jinrujiantouxiao1">
+            意见反馈
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="iconfont icon-jinrujiantouxiao1">
+            关于我们
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="out_btn">
+      <a href="javascript:;">退出登录</a>
+    </div>
+  </div>
+  <footer class="pyg_footer">
+    <a href="/index.html">
+      <span class="iconfont icon-fangzi"></span>
+      <span class="link_name">首页</span>
+    </a>
+    <a href="/pages/category.html">
+      <span class="iconfont icon-liebiao"></span>
+      <span class="link_name">分类</span>
+    </a>
+    <a href="/pages/cart.html">
+      <span class="iconfont icon-gouwuche"></span>
+      <span class="link_name">购物车</span>
+    </a>
+    <a href="/pages/me.html">
+      <span class="iconfont icon-wode"></span>
+      <span class="link_name">用户</span>
+    </a>
+  </footer>
+</body>
+<script type="text/template" id="usersTemplate">
+  <div class="my_img">
+    <span class="iconfont icon-changyongxinxi"></span>
+  </div>
+  <div class="my_content">
+    <div class="my_phone">{{data.user_tel}}</div>
+    <div class="my_emil">{{data.user_email}}</div>
+  </div>
+</script>
+<script src="/lib/mui/js/mui.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
+<script src="/lib/arttemplate/template-web.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/me.js"></script>
+
+</html>

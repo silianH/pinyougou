@@ -1,0 +1,37 @@
+.tab_title {
+  background-color: #fff;
+}
+
+.tab_content {
+  #item1,#item2,#item3 {
+    padding: .1rem;
+    ul {
+      background-color: #fff;
+      border: .02rem solid #ccc;
+      border-radius: .06rem;
+      padding: .06rem .16rem;
+      li {
+        border-bottom: .01rem solid #ccc;
+        padding: .06rem 0;
+        &:last-child {
+          border: none;
+        }
+        a {
+          display: flex;
+          .orderForm {
+            flex: 4;
+          }
+          .orderForm_price {
+            color: #f40;
+            font-size: .18rem;
+            flex: 1;
+            text-align: right;
+            span {
+              font-size: .14rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

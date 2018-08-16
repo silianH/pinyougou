@@ -20,7 +20,7 @@ $(function () {
         // 未登录  没有用户信息
         mui.toast("未登录");
         // 给一个信息  让用户登录后跳转回当前页
-        sessionStorage.setItem("pageName", location.href);
+        $.setPage();
         // return;
         setTimeout(function () {
           location.href = "/pages/login.html";
@@ -59,7 +59,7 @@ $(function () {
           console.log(res);
           if (res.meta.status == 401) {
             mui.toast("未登录");
-            sessionStorage.setItem("pageName", location.href);
+            $.setPage();
             setTimeout(function () {
               location.href = "/pages/login.html";
             }, 1000);

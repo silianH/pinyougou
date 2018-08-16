@@ -14,7 +14,8 @@
 </head>
 
 <!-- class="openCompile" -->
-<body id="openCompile" >
+
+<body id="openCompile">
   <header class="pyg_header pages_header">
     <a href="javascript:;" class="delete_btn">
       <button type="button" class="mui-btn mui-btn-danger mui-btn-outlined" data-loading-icon-position="right">删除</button>
@@ -39,7 +40,7 @@
         <span class="iconfont icon-mudedi"></span>
         <div class="">
           默认地址
-          <p>中国广东汕头</p>
+          <p class="consignee_addr">中国广东汕头</p>
         </div>
       </div>
     </div>
@@ -95,11 +96,11 @@
       <span class="iconfont icon-liebiao"></span>
       <span class="link_name">分类</span>
     </a>
-    <a href="javascript:;">
+    <a href="/pages/cart.html">
       <span class="iconfont icon-gouwuche"></span>
       <span class="link_name">购物车</span>
     </a>
-    <a href="javascript:;">
+    <a href="/pages/me.html">
       <span class="iconfont icon-wode"></span>
       <span class="link_name">用户</span>
     </a>
@@ -108,9 +109,11 @@
 </body>
 <script type="text/template" id="cartTemp">
   {{each obj value key}}
-  <li>
-    <div class="goods_input mui-input-row mui-checkbox">
-      <input class="goods_chk" name="goods_ratio" type="checkbox">
+  <li data-obj='{{value}}'>
+    <div class="goods_input">
+      <div class="mui-input-row mui-checkbox">
+        <input name="goods_ratio" type="checkbox">
+      </div>
     </div>
     <div class="goods_img">
       <img src="{{value.goods_small_logo}}" alt="">
@@ -118,7 +121,9 @@
     <div class="item_info">
       <p class="mui-ellipsis-2">{{value.goods_name}}</p>
       <span class="li_price">
-        <em>￥</em><span>{{value.goods_price}}</span></span>
+        <em>￥</em>
+        <span>{{value.goods_price}}</span>
+      </span>
       <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{value.goods_number}}" data-numbox-step="1">
         <!-- "-"按钮，点击可减小当前数值 -->
         <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
@@ -130,8 +135,8 @@
   </li>
   {{/each}}
 </script>
-<script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/mui/js/mui.js"></script>
+<script src="/lib/zepto/zepto.js"></script>
 <script src="/lib/arttemplate/template-web.js"></script>
 <script src="/lib/fastclick/fastclick.js"></script>
 <script src="/js/common.js"></script>

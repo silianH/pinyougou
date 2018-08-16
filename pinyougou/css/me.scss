@@ -1,0 +1,89 @@
+.pyg_view {
+  padding: .2rem .1rem;
+  >div {
+    padding: .1rem;
+    border: .01rem solid #ccc;
+    border-radius: .04rem;
+    background-color: #fff;
+    margin-bottom: .1rem;
+  }
+  .my {
+    display: flex;
+    .my_img {
+      flex: 1;
+      span {
+        font-size: .36rem;
+        line-height: 1;
+      }
+    }
+    .my_content {
+      flex: 5;
+      .my_emil {
+        font-size: .14rem;
+        color: #666;
+      }
+    }
+  }
+  .orderManagement{
+    padding: .1rem 0;
+    .oM_title{
+      line-height: 1;
+      padding: 0 .1rem .1rem;
+      border-bottom: .01rem solid #ccc;
+    }
+    .oM_nav{
+      display: flex;
+      padding-top: .06rem;
+      a{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span{
+          line-height: 1;
+          padding: .02rem;
+          font-size: .14rem;
+          color: #007aff;
+          &.iconfont{
+            font-size: .26rem;
+          }
+          text-align: center;
+        }
+      }
+    }
+  }
+  .my_else{
+    padding: 0 .12rem;
+    ul li {
+      &:last-child{
+        border: none;
+      }
+      border-bottom: .01rem solid #ccc;
+      a{
+        position: relative;
+        font-size: .16rem;
+        line-height: 1;
+        padding: .14rem 0;
+        span{
+          position: absolute;
+          right: 0;
+        }
+        &::before{
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+  .out_btn{
+    border-radius: .06rem;
+    background-color: #dd524d;
+    padding: 0;
+    a{
+      text-align: center;
+      color: #fff;
+      font-size: .18rem;
+      padding: .18rem;
+    }
+  }
+}

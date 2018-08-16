@@ -81,10 +81,14 @@
     .BuyCart_content {
       ul li {
         display: flex;
+        padding: .05rem 0;
         .goods_input {
           display: none;
           flex: 1;
-          position: relative;
+          div {
+            height: 100%;
+            position: relative;
+          }
           input {
             position: absolute;
             left: 50%;
